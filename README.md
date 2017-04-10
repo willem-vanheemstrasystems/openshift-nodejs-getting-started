@@ -10,7 +10,7 @@ To follow along, you’ll need access to an OpenShift account, and a development
 Start a Terminal session, type:
 
 ```javascript
-oc login
+oc login https://api.preview.openshift.com
 ```
 
 You will be prompted as follows:
