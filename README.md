@@ -241,5 +241,26 @@ Warnings:
 View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
 ```
 
-To make your new Kubernetes service available via an http route, run the following command after updating it to include your service name as the last argument:
+To make your new Kubernetes service available via an ***http route***, run the following command after updating it to include your service name as the last argument:
+
+```javascript
+oc expose svc pillar-base
+```
+
+You will be prompted with: ```route "pillar-base" exposed```
+
+Then, run “oc status” to find the host address where your NodeJS app will be available.
+
+```javascript
+...
+http://pillar-base-totaljs-001.44fs.preview.openshiftapps.com to pod port 8080-tcp (svc/pillar-base)
+  dc/pillar-base deploys istag/pillar-base:latest <-
+    bc/pillar-base source builds http://github.com/OpenShiftDemos/pillar-base on openshift/nodejs:4
+    deployment #1 deployed 17 minutes ago - 1 pod
+...    
+```
+
+You can open a browser and surf to http://pillar-base-totaljs-001.44fs.preview.openshiftapps.com to see the start page of the pillar-base application.
+
+
 
