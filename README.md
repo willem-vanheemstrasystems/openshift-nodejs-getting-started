@@ -74,5 +74,5 @@ For example, to schedule a build and deployment, layering the [pillar-base examp
 oc new-app nodejs~http://github.com/OpenShiftDemos/pillar-base
 ```
 
-
+***NOTE***: PillarsJS - is a modular and scalable framework for web development in Node.js. See also http://pillarsjs.com
 
