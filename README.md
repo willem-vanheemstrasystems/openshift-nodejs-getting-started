@@ -3,6 +3,10 @@
 
 Based on 'Getting Started with NodeJS on OpenShift Online Next Gen' at https://blog.openshift.com/getting-started-nodejs-oso3/
 
+To follow along, you’ll need access to an OpenShift account, and a development environment with nodejs, git, and a copy of the “oc” command line tool.
+
+## Login to OpenShift Online Next Gen
+
 Start a Terminal session, type:
 
 ```javascript
@@ -49,4 +53,14 @@ You have one project on this server: "totaljs-001"
 
 Using project "totaljs-001".
 ```
+
+## Build and Deploy Images from the OpenShift Command Line Interface (CLI) Tool
+
+Adapting your NodeJS source code to run on in a container can usually be accomplished in two easy steps:
+
+1. Include a package.json file with valid "dependencies" and "scripts" sections – allowing builds to be started with “npm install”, and webservers to be initialized via “npm start”
+
+2. Your source repo should launch a single web process that listens on port “8080” in order to connect to the Kubernetes “Service” (or load-balancer)
+
+
 
