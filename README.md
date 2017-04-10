@@ -62,5 +62,17 @@ Adapting your NodeJS source code to run on in a container can usually be accompl
 
 2. Your source repo should launch a single web process that listens on port “8080” in order to connect to the Kubernetes “Service” (or load-balancer)
 
+Schedule a new build and deployment, adding source code from “REPO_NAME” to a new image layer on top of “BASE_IMAGE”:
+
+```javascript
+oc new-app BASE_IMAGE~REPO_NAME
+```
+
+For example, to schedule a build and deployment, layering the [pillar-base example repo](http://github.com/OpenShiftDemos/pillar-base) on top of the [system-provided nodejs base image](https://blog.openshift.com/getting-started-nodejs-oso3/#Base_Images), run:
+
+```javascript
+oc new-app nodejs~http://github.com/OpenShiftDemos/pillar-base
+```
+
 
 
