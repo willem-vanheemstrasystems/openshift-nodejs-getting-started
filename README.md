@@ -34,4 +34,19 @@ Use this token directly against the API
 curl -H "Authorization: Bearer 2Oqm_6ypYIcpu8lOJN0LbYLJ-PhOJ8g9xpDvxpzFOTP" "https://api.preview.openshift.com/oapi/v1/users/~"
 ```
 
+Now try to login again as follows:
+
+```javascript
+oc login --token=2Oqm_6ypYIcpu8lOJN0LbYLJ-PhOJ8g9xpDvxpzFOTP --server=https://api.preview.openshift.com
+```
+
+You will be prompted as follows:
+
+```javascript
+Logged into "https://api.preview.openshift.com:443" as "willem-vanheemstrasystems" using the token provided.
+
+You have one project on this server: "totaljs-001"
+
+Using project "totaljs-001".
+```
 
