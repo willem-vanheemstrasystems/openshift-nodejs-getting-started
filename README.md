@@ -215,5 +215,31 @@ svc/pillar-base - 172.30.94.15:8080
 9 warnings identified, use 'oc status -v' to see details.
 ```
 
+With ```oc status -v``` it shows the 9 warnings:
+
+```javascript
+Warnings:
+  * pod/ce-nodejs-ex001-4-build has no liveness probe to verify pods are still running.
+    try: oc set probe pod/ce-nodejs-ex001-4-build --liveness ...
+  * pod/ce-nodejs-ex001-5-build has no liveness probe to verify pods are still running.
+    try: oc set probe pod/ce-nodejs-ex001-5-build --liveness ...
+  * pod/openshift-totaljs-mongodb-1-build has no liveness probe to verify pods are still running.
+    try: oc set probe pod/openshift-totaljs-mongodb-1-build --liveness ...
+  * pod/openshift-totaljs-mongodb-2-build has no liveness probe to verify pods are still running.
+    try: oc set probe pod/openshift-totaljs-mongodb-2-build --liveness ...
+  * pod/pillar-base-1-build has no liveness probe to verify pods are still running.
+    try: oc set probe pod/pillar-base-1-build --liveness ...
+  * dc/ce-nodejs-ex001 has no readiness probe to verify pods are ready to accept traffic or ensure deployment is successful.
+    try: oc set probe dc/ce-nodejs-ex001 --readiness ...
+  * dc/ce-nodejs-ex001 has no liveness probe to verify pods are still running.
+    try: oc set probe dc/ce-nodejs-ex001 --liveness ...
+  * dc/pillar-base has no readiness probe to verify pods are ready to accept traffic or ensure deployment is successful.
+    try: oc set probe dc/pillar-base --readiness ...
+  * dc/pillar-base has no liveness probe to verify pods are still running.
+    try: oc set probe dc/pillar-base --liveness ...
+
+View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
+```
+
 To make your new Kubernetes service available via an http route, run the following command after updating it to include your service name as the last argument:
 
