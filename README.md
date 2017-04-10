@@ -262,5 +262,15 @@ http://pillar-base-totaljs-001.44fs.preview.openshiftapps.com to pod port 8080-t
 
 You can open a browser and surf to http://pillar-base-totaljs-001.44fs.preview.openshiftapps.com to see the start page of the pillar-base application.
 
+# Deleting a Deployment Configuration (DC)
 
+You can run the following command to delete a deployment configuration.
+
+***WARNING***: This will remove the deployment configuration as well as all deployments within the project! It can not be undone!
+
+```javascript
+oc delete dc my-application-name -n my-project-name
+```
+
+Where my-application-name is the name of the application you want to delete the deployment configuration of, and my-project-name is the name of the project that contains your application.
 
